@@ -1,0 +1,2 @@
+DB-api_URL = http://localhost:3000/api/dataengineer
+Geoloc-api_URL = https://nominatim.openstreetmap.org/search?q=${address}&format=json

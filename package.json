@@ -1,0 +1,24 @@
+{
+  "name": "j_splawski_api-mysql_challenge",
+  "version": "1.0.0",
+  "description": "Tech-Challenge API-MySQL",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon"
+  },
+  "keywords": [
+    "API",
+    "MySQL"
+  ],
+  "author": "Joffrey SPLAWSKI",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mysql": "^2.18.1",
+    "node-fetch": "^2.6.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
