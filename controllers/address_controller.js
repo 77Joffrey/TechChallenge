@@ -21,10 +21,13 @@ exports.updateAddress = (req, res, next) => {
     if (!err) {
       res.status(200).json(results);
       const data =  results;
-/*       for(i = 0; data.length > i; i ++){
+      const testingUpdate = [{"lat" : 49.785789}, {"long" : 5.756983}];
+      console.log(testingUpdate[0].lat);
+      for(i = 0; data.length > i; i ++){
         // ajout fetch ici
-        const completeAddress = `${data[i].address}` + "," + `${data[i].city}`
-        let updateQuery = "UPDATE `address` SET `latitude` = '', `longitude` = '' WHERE `address_id` = " + data[i]["address_id"];
+        // const completeAddress = `${data[i].address}` + "," + `${data[i].postal_code}` + "," + `${data[i].city}`
+        // console.log(completeAddress);
+        let updateQuery = "UPDATE `address` SET `latitude` = " + testingUpdate[0].lat + ",`longitude` = " + testingUpdate[1].long + "WHERE `address_id` = " + data[i]["address_id"];
         connection.query(updateQuery, (err, updateResults) => {
             if (!err) {
                 console.log('DB updated!');
@@ -32,7 +35,7 @@ exports.updateAddress = (req, res, next) => {
                 console.log('Error!');
               }
         })
-      } */
+      }
 
 
 /*       fetch("https://nominatim.openstreetmap.org/search?q=11+RUE+DES+CHENES,VERNOU-LA-CELLE+SUR+SEINE&format=jsonv2")
